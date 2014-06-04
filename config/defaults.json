@@ -1,0 +1,11 @@
+{
+	"PORT": 56301,
+	"SUBSCRIPTION_KEEPALIVE_TIMEOUT": 80,
+	"PERSISTENCE": {
+		"type": "Redis",
+		"options": { 
+			"url": "redis://localhost:27017/",
+			"collectionNamespace": "origin"
+		}
+	}
+}
