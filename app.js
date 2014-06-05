@@ -10,7 +10,8 @@
 //lm create redis persistence layer
 //lm need some error handling and recovery, in case exceptions happen, so the process doesn't go down. 
 
-var nconf = require('nconf');
+var nconf = require('nconf'),
+    clc = require('cli-color');
 
 nconf.argv()
      .env()
@@ -25,8 +26,14 @@ var frontend = require('./lib/frontend/' + nconf.get('FRONTEND').type);
 /* Service interface  */
 
 serviceInterface.listen(function(channel, value) {
+  // Log to console
+  if (nconf.get('LOG_SERVICE_UPDATES')) {
+    console.log('>>> ' + clc.blue(channel));
+    console.log(JSON.stringify(value));
+  }
+
   // stores the value and triggers an update to subscribers if the value has changed
-  persistence.set(key, value, function(hasValueChanged) {
+  persistence.set(channel, value, function(hasValueChanged) {
     if (hasValueChanged) {
       // send an update to all subscribers
       frontend.sendChannelUpdate(channel, value);

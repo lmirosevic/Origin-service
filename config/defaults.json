@@ -9,7 +9,7 @@
 	"SERVICE_INTERFACE": {
 		"type": "Resque",
 		"options": {
-			"redis": "redis://localhost:6379/3",
+			"redis": "redis://localhost:6379/4",
 			"queue": "origin.serviceInterface",
 			"maxReconnectionTimeout": 1000
 		}
@@ -20,5 +20,6 @@
 			"port": 56301,
 			"subscriptionKeepaliveTimeout": 80
 		}
-	}
+	},
+	"LOG_SERVICE_UPDATES": true
 }
