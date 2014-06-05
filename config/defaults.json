@@ -1,11 +1,24 @@
 {
-	"PORT": 56301,
-	"SUBSCRIPTION_KEEPALIVE_TIMEOUT": 80,
 	"PERSISTENCE": {
-		"type": "Redis",
+		"type": "InMemory",
 		"options": { 
 			"url": "redis://localhost:27017/",
 			"collectionNamespace": "origin"
+		}
+	},
+	"SERVICE_INTERFACE": {
+		"type": "Resque",
+		"options": {
+			"redis": "redis://localhost:6379/3",
+			"queue": "origin.serviceInterface",
+			"maxReconnectionTimeout": 1000
+		}
+	},
+	"FRONTEND" : {
+		"type": "ZeroMQ",
+		"options": {
+			"port": 56301,
+			"subscriptionKeepaliveTimeout": 80
 		}
 	}
 }
