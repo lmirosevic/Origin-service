@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Goonbee. All rights reserved.
 //
 
-
-//lm create redis persistence layer
 //lm need some error handling and recovery, in case exceptions happen, so the process doesn't go down. 
 
 var nconf = require('nconf');
