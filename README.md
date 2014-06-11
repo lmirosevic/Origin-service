@@ -4,8 +4,8 @@ Origin: A simple & scalable pub/sub service with Last Value Caching, written in 
 
 This is the service itself. It receives updates from the service interface, and send them to all connected subscribers.
 
-[Node.js Service Interface](https://github.com/lmirosevic/Origin-service-interface)
-[Node.js Service](https://github.com/lmirosevic/Origin-service)
+[Node.js Service Interface](https://github.com/lmirosevic/Origin-service-interface)  
+[Node.js Service](https://github.com/lmirosevic/Origin-service)  
 [Objective-C Client](https://github.com/lmirosevic/Origin-client)
 
 Copyright & License
