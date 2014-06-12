@@ -8,11 +8,8 @@
 
 //lm need some error handling and recovery, in case exceptions happen, so the process doesn't go down. 
 
-var nconf = require('nconf');
-
-nconf.argv()
-     .env()
-     .file({file: './config/defaults.json'});
+var nconf = require('./lib/config'),
+    logger = require('./lib/logger');
 
 /* Plugins */
 
@@ -36,4 +33,4 @@ serviceInterface.listen(function(channel, value) {
 
 frontend.setPersistenceKeyValueGetter(persistence.get);
 frontend.startService();
-console.log('Origin server started.');
+logger.info('Origin server started.');

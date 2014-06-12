@@ -3,7 +3,7 @@
 		"type": "Redis",
 		"options": { 
 			"url": "redis://localhost:6379/5",
-			"collectionNamespace": "origin",
+			"collectionNamespace": "origin.persistence",
 			"maxReconnectionTimeout": 1000
 		}
 	},
@@ -23,5 +23,6 @@
 			"subscriptionKeepaliveTimeout": 80,
 			"logSignificantUpdates": true
 		}
-	}
+	},
+	"LOGENTRIES_ACCOUNT_KEY": "<account key>"
 }
