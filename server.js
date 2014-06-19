@@ -6,18 +6,5 @@
 //  Copyright (c) 2014 Goonbee. All rights reserved.
 //
 
-// WARNING: DON'T FORGET TO MAP ELB PORT TO 80 INTERNALLY, PUBLIC PORT CAN BE CHOSEN AT WILL
-
-var nconf = require('nconf');
-
-// Override the port for OpsWorks
-nconf.overrides({
-  FRONTEND: {
-    options: {
-      port: 80
-    }
-  }
-});
-
-// Start the app
+// OpsWorks compatibility layer
 require('./app');
