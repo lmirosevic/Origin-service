@@ -2,7 +2,7 @@
 	"PERSISTENCE": {
 		"type": "Redis",
 		"options": { 
-			"url": "redis://localhost:6379/5",
+			"url": "redis://localhost:6379/",
 			"collectionNamespace": "origin.persistence",
 			"maxReconnectionTimeout": 1000
 		}
@@ -10,7 +10,7 @@
 	"SERVICE_INTERFACE": {
 		"type": "Resque",
 		"options": {
-			"redis": "redis://localhost:6379/4",
+			"redis": "redis://localhost:6379/",
 			"queue": "origin.serviceInterface",
 			"maxReconnectionTimeout": 1000,
 			"logUpdates": true
