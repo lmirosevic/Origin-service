@@ -2,7 +2,7 @@
 	"name": "origin-service",
 	"description": "Origin: A simple & scalable pub/sub service with Last Value Caching, written in Node.js using ZMQ and Redis. Comes with iOS client library.",
 	"author" : "Luka Mirosevic <luka@goonbee.com>",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"private": false,
 	"main": "app.js",
 	"repository": {
