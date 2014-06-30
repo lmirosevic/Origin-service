@@ -20,7 +20,6 @@
 		"type": "ZeroMQ",
 		"options": {
 			"port": 56301,
-			"subscriptionKeepaliveTimeout": 80,
 			"logSignificantUpdates": true
 		}
 	},
